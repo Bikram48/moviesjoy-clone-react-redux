@@ -1,0 +1,54 @@
+@import "../../common/colors.scss";
+
+.moviejoy__header {
+    background-color: $secondary-color;
+    padding: 15px;
+   
+
+    &-icon {
+        color: $font-primary;
+        font-size: 20px;
+    }
+
+    &-search {
+
+        form {
+            position: relative;
+        }
+
+        input {
+            width: 100%;
+            padding-left: 40px;
+            height: 38px;
+            border: none;
+            outline: none;
+            border-radius: 10px;
+        }
+        
+        &_icon {
+            position: absolute;
+            color: black;
+            width: 40px;
+            height: 38px;
+            line-height: 40px;
+            display: inline-block;
+            text-align: center;
+        }
+    }
+}
+
+.moviejoy__top-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 1.3em;
+}
+
+.moviejoy__header-logo {
+    height: 30px;
+
+    img {
+        height: 100%;
+        width: auto;
+    }
+}
