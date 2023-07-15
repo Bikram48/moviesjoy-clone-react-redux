@@ -1,6 +1,10 @@
 import { combineReducers } from "redux";
+const initialState = {
+  moviesData: null,
+  seriesData: null,
+};
 
-function dataFetchingReducer(state = [], action) {
+function dataFetchingReducer(state = initialState, action) {
   switch (action.type) {
     case "FETCH_MOVIES":
       return {
@@ -8,7 +12,7 @@ function dataFetchingReducer(state = [], action) {
         moviesData: action.payload,
       };
     case "FETCH_SHOWS":
-      return { ...state, showData: action.payload };
+      return { ...state, seriesData: action.payload };
     default:
       return state;
   }

@@ -5,15 +5,18 @@ import { useSelector } from "react-redux";
 
 export default function MovieList() {
   const moviesData = useSelector((state) => {
-    return state.dataFetchingReducer.moviesData.movies;
+    console.log(state.dataFetchingReducer.moviesData);
+    return state.dataFetchingReducer.moviesData;
   });
 
   const seriesData = useSelector((state) => {
-    return state.dataFetchingReducer.showData.series;
+    return state.dataFetchingReducer.seriesData;
   });
 
-  let renderMovies = moviesData.map((movie) => <MovieCard data={movie} />);
-  let renderShows = seriesData.map((show) => <MovieCard data={show} />);
+  let renderMovies =
+    moviesData && moviesData.map((movie) => <MovieCard data={movie} />);
+  let renderShows =
+    seriesData && seriesData.map((show) => <MovieCard data={show} />);
   return (
     <div className="moviejoy__movielist-wrapper">
       <div className="moviejoy__movielist">
