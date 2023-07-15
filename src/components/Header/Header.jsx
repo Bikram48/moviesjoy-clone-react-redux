@@ -1,7 +1,7 @@
 import React from "react";
 import Logo from "../../assets/logo.png";
 import "./Header.scss";
-import { RiAccountPinBoxFill, RiSearchLine } from "react-icons/ri";
+import { RiSearchLine } from "react-icons/ri";
 import { FaUser } from "react-icons/fa";
 
 export default function Header() {
@@ -15,7 +15,7 @@ export default function Header() {
           <FaUser />
         </div>
       </div>
-
+      <h2>Find Movies, TV shows and more</h2>
       <div className="moviejoy__header-search">
         <form action="">
           <div className="moviejoy__header-search_icon">

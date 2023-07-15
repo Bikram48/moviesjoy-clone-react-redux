@@ -3,17 +3,46 @@
 .moviejoy__header {
     background-color: $secondary-color;
     padding: 15px;
-   
+    position: relative;
+    
+    
+    @media(min-width: 768px) {
+        padding: 2em;
+    }
 
     &-icon {
         color: $font-primary;
         font-size: 20px;
     }
 
+    h2 {
+        text-align: center;
+        display: none;
+        font-weight: 300;
+        font-size: 2em;
+        margin: 1.5em 0 1em;
+
+        @media(min-width: 768px) {
+            display: block;
+          
+        }
+    }
+
     &-search {
+        @media(min-width: 768px) {
+            position: absolute;
+            width: 100%;
+            margin: 0 auto;
+            bottom: -30px;
+        }
 
         form {
             position: relative;
+
+            @media(min-width:768px) {
+                max-width: 980px;
+                margin: 0 auto;
+            }
         }
 
         input {
@@ -23,6 +52,14 @@
             border: none;
             outline: none;
             border-radius: 10px;
+
+            @media(min-width: 768px) {
+                height: 70px;
+                padding-right: 85px;
+                border-radius: 45px;
+                padding-left: 65px;
+                font-size: 1.3rem;
+            }
         }
         
         &_icon {
@@ -33,6 +70,13 @@
             line-height: 40px;
             display: inline-block;
             text-align: center;
+
+            @media(min-width: 768px) {
+                height: 70px;
+                line-height: 75px;
+                width: 70px;
+                font-size: 24px;
+            }
         }
     }
 }
