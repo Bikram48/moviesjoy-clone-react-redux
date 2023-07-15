@@ -11,8 +11,8 @@ function App() {
 
   useEffect(() => {
     async function fetchData() {
-      dispatch(fetchMoviesData(await fetchMovies()));
-      dispatch(fetchShowsData(await fetchShows()));
+      dispatch(fetchMoviesData({ movies: await fetchMovies() }));
+      dispatch(fetchShowsData({ series: await fetchShows() }));
     }
 
     fetchData();

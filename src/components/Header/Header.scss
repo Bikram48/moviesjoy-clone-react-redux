@@ -4,11 +4,12 @@
     background-color: $secondary-color;
     padding: 15px;
     position: relative;
-    margin-bottom: 80px;
+    margin-bottom: 30px;
     
     
     @media(min-width: 768px) {
         padding: 2em;
+        margin-bottom: 80px;
     }
 
     &-icon {

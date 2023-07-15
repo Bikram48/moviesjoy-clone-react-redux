@@ -3,9 +3,12 @@ import { combineReducers } from "redux";
 function dataFetchingReducer(state = [], action) {
   switch (action.type) {
     case "FETCH_MOVIES":
-      return action.payload;
+      return {
+        ...state,
+        moviesData: action.payload,
+      };
     case "FETCH_SHOWS":
-      return action.payload;
+      return { ...state, showData: action.payload };
     default:
       return state;
   }
