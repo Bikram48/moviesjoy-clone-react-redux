@@ -1,0 +1,20 @@
+.moviejoy__movielist-card {
+    margin: 0 2% 15px;
+    
+    &_image {
+        margin-bottom: 6px;
+
+        img {
+            width: 100%;
+        }
+    }
+
+    &_title {
+        h2 {
+            margin-bottom: 5px;
+            font-size: 14px;
+            line-height: 1.3em;
+            font-weight: 500;
+        }
+    }
+}

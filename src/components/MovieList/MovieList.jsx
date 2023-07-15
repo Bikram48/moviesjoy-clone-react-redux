@@ -1,5 +1,6 @@
 import React from "react";
 import MovieCard from "../MovieCard/MovieCard";
+import "./MovieList.scss";
 // import { useSelector, useDispatch } from "react-redux";
 // import { fetchDataRequest } from "../../actions/actions";
 
@@ -26,6 +27,13 @@ export default function MovieList() {
 
   return (
     <div className="moviejoy__movielist">
+      <MovieCard />
+      <MovieCard />
+      <MovieCard />
+      <MovieCard />
+      <MovieCard />
+      <MovieCard />
+      <MovieCard />
       <MovieCard />
     </div>
   );
