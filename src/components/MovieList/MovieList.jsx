@@ -5,7 +5,6 @@ import { useSelector } from "react-redux";
 
 export default function MovieList() {
   const moviesData = useSelector((state) => {
-    console.log(state.dataFetchingReducer.moviesData);
     return state.dataFetchingReducer.moviesData;
   });
 
