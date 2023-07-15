@@ -19,7 +19,7 @@ export default function MovieList() {
     }
 
     fetchData();
-  }, []);
+  }, [dispatch]);
 
   return (
     <div className="moviejoy__movielist">
