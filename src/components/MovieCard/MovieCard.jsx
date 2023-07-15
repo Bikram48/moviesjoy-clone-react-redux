@@ -10,7 +10,7 @@ export default function MovieCard() {
   return (
     <>
       {moviesData.map((movie) => (
-        <div id={movie.imdbID} className="moviejoy__movielist-card">
+        <div key={movie.imdbID} className="moviejoy__movielist-card">
           <div className="moviejoy__movielist-card_image">
             <img src={movie.Poster} alt="" />
           </div>
