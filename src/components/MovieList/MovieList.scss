@@ -1,18 +1,42 @@
 .moviejoy__movielist {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    padding: 15px;
+    margin-bottom: 3em;
+}
 
-    @media (min-width: 640px) {
-        grid-template-columns: repeat(3, 1fr);
+.moviejoy__movielist,
+.moviejoy__showlist {
+
+    &-wrapper {
+        padding: 15px;
     }
-    @media (min-width: 768px) {
-        grid-template-columns: repeat(4, 1fr);
+
+    &-heading {
+        font-size: 30px;
+        line-height: 1.3em;
+        font-weight: 300;
+        margin-left: 5px;
+        margin-bottom: 15px;
+        color: #eee;
+
+        @media(min-width: 768px) {
+            margin-bottom: 25px;
+        }
     }
-    @media (min-width: 1024px) {
-        grid-template-columns: repeat(6, 1fr);
-    }
-    @media (min-width: 1536px) {
-        grid-template-columns: repeat(8, 1fr);
+
+    &-cards {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+
+        @media (min-width: 640px) {
+            grid-template-columns: repeat(3, 1fr);
+        }
+        @media (min-width: 768px) {
+            grid-template-columns: repeat(4, 1fr);
+        }
+        @media (min-width: 1024px) {
+            grid-template-columns: repeat(6, 1fr);
+        }
+        @media (min-width: 1536px) {
+            grid-template-columns: repeat(8, 1fr);
+        }
     }
 }
