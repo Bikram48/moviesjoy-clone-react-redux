@@ -12,7 +12,7 @@
 
     &_image {
         height: 200px;
-        background-image: url("https://m.media-amazon.com/images/M/MV5BMTY2NDI2MTc2NV5BMl5BanBnXkFtZTcwNjA2NTQzMw@@._V1_SX300.jpg");
+        // background-image: url("https://m.media-amazon.com/images/M/MV5BMTY2NDI2MTc2NV5BMl5BanBnXkFtZTcwNjA2NTQzMw@@._V1_SX300.jpg");
         background-repeat: no-repeat;
         background-size: cover;
 
@@ -47,6 +47,23 @@
 
     &_content {
         padding: 0 15px;
+        display: flex;
+        gap: 2em;
+        max-width: 1200px;
+        margin: 0 auto;
+    }
+
+    &_poster {
+        width: 180px;
+
+        @media(max-width: 768px) {
+            display: none;
+        }
+
+        img {
+            width: 100%;
+            height: 100%;
+        }
     }
 
     &_btn {
@@ -73,6 +90,11 @@
     .heading__name {
         font-size: 24px;
         line-height: 1.4em;
+
+        @media(min-width: 768px) {
+            font-size: 37px;
+            line-height: 1.3;
+        }
     }
 
     .heading__name,
@@ -84,15 +106,38 @@
     .description {
         font-size: 14px;
         line-height: 1.5em;
+
+        @media(min-width: 768px) {
+            font-size: 16px;
+            line-height: 1.6;
+        }
     }
 
-    .released__date {
+    .similar {
         font-size: 14px;
         line-height: 1.3em;
         font-weight: 300;
+        margin-bottom: 5px;
+
+        @media(min-width: 768px) {
+            font-size: 15px;
+            line-height: 1.5;
+        }
 
         &-title {
             font-weight: 400;
         }
+    }
+
+    &_row {
+        display: flex;
+
+        @media(max-width: 768px) {
+            flex-direction: column;
+        }
+    }
+
+    &_col {
+        flex: 0 0 41.666667%;
     }
 }

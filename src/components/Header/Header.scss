@@ -4,12 +4,10 @@
     background-color: $secondary-color;
     padding: 15px;
     position: relative;
-    margin-bottom: 30px;
     
     
     @media(min-width: 768px) {
-        padding: 2em;
-        margin-bottom: 80px;
+        padding: 1.4em;
     }
 
     &-icon {
@@ -22,7 +20,7 @@
         display: none;
         font-weight: 300;
         font-size: 2em;
-        margin: 1.5em 0 1em;
+        margin: 2em 0 1.5em;
 
         @media(min-width: 768px) {
             display: block;
@@ -87,7 +85,11 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
-    margin-bottom: 1.3em;
+    margin-bottom: 2em;
+
+    @media(min-width: 768px) {
+        margin-bottom: 0;
+    }
 }
 
 .moviejoy__header-logo {

@@ -19,3 +19,14 @@ export async function fetchShows() {
 
   return data;
 }
+
+export async function fetchMovieorShowDetail(id) {
+  const request = await fetch(
+    `https://www.omdbapi.com/?apiKey=5fea68ed&i=${id}`
+  );
+
+  const response = await request.json();
+  // const data = response.Search;
+
+  return response;
+}
