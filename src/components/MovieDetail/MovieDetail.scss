@@ -1,0 +1,98 @@
+.moviejoy__detail-page {
+    margin-bottom: 2em;
+    margin-top: -30px;
+
+    @media(min-width: 768px) {
+        margin-top: -80px;
+    }
+    &_cover {
+        position: relative;
+        z-index: -99999;
+    }
+
+    &_image {
+        height: 200px;
+        background-image: url("https://m.media-amazon.com/images/M/MV5BMTY2NDI2MTc2NV5BMl5BanBnXkFtZTcwNjA2NTQzMw@@._V1_SX300.jpg");
+        background-repeat: no-repeat;
+        background-size: cover;
+
+        @media(min-width: 768px) {
+            min-height: calc(100vh - 326px);
+        }
+   
+
+        &::before {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            z-index: 2;
+            background: rgba(21,21,21,.6);
+        }
+
+        &::after {
+            content: "";
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            z-index: 3;
+            top: 150px;
+            background: linear-gradient(180deg,rgba(34,34,34,0) 0,#44406f 100%);
+        }
+
+    }
+
+    &_content {
+        padding: 0 15px;
+    }
+
+    &_btn {
+        z-index: 5;
+        margin-bottom: 15px;
+
+        &>a {
+            min-height: 40px;
+            width: 150px;
+            background: #a79fff;
+            border-radius: 30px;
+            padding: .375rem .75rem;
+            font-size: 1rem;
+            line-height: 1.5;
+            font-weight: 400;
+            color: #111;
+            display: flex;
+            gap: .5em;
+            align-items: center;
+            justify-content: center;
+        }
+    }
+
+    .heading__name {
+        font-size: 24px;
+        line-height: 1.4em;
+    }
+
+    .heading__name,
+    .description {
+        margin-bottom: 15px;
+        font-weight: 300;
+    }
+
+    .description {
+        font-size: 14px;
+        line-height: 1.5em;
+    }
+
+    .released__date {
+        font-size: 14px;
+        line-height: 1.3em;
+        font-weight: 300;
+
+        &-title {
+            font-weight: 400;
+        }
+    }
+}
