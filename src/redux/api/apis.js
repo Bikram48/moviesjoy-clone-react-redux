@@ -1,5 +1,4 @@
 export async function fetchMovies(term) {
-  console.log(term);
   const query = term || "James";
   const request = await fetch(
     `https://www.omdbapi.com?apiKey=5fea68ed&s=${query}&type=movie`

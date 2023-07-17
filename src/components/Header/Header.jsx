@@ -1,26 +1,26 @@
-import React, { useState, useEffect } from "react";
+import React from "react";
 import Logo from "../../assets/logo.png";
 import "./Header.scss";
 import { RiSearchLine } from "react-icons/ri";
-import { fetchMovies, fetchShows } from "../../redux/api/apis";
-import { fetchMoviesData, fetchShowsData } from "../../redux/actions/actions";
 import { FaUser } from "react-icons/fa";
 import { Link } from "react-router-dom";
+import { useState } from "react";
 import { useDispatch } from "react-redux";
+import { fetchMoviesData, fetchShowsData } from "../../redux/actions/actions";
+import { fetchMovies, fetchShows } from "../../redux/api/apis";
 
 export const HomeHeader = () => {
-  const [term, setTerm] = useState("");
-
   const dispatch = useDispatch();
+  const [query, setQuery] = useState("");
 
-  useEffect(() => {
-    async function fetchData() {
-      dispatch(fetchMoviesData(await fetchMovies(term)));
-      dispatch(fetchShowsData(await fetchShows(term)));
-    }
+  const searchQuery = async (e) => {
+    e.preventDefault();
+    console.log("submit clicked");
+    dispatch(fetchMoviesData(await fetchMovies(query)));
+    dispatch(fetchShowsData(await fetchShows(query)));
+    // setQuery("");
+  };
 
-    fetchData();
-  }, [dispatch, term]);
   return (
     <div className="moviejoy__header">
       <div className="moviejoy__top-header">
@@ -35,15 +35,15 @@ export const HomeHeader = () => {
       </div>
       <h2>Find Movies, TV shows and more</h2>
       <div className="moviejoy__header-search">
-        <form action="">
+        <form action="" onSubmit={searchQuery}>
           <div className="moviejoy__header-search_icon">
             <RiSearchLine />
           </div>
           <input
             type="text"
             placeholder="Enter Keywords..."
-            value={term}
-            onChange={(e) => setTerm(e.target.value)}
+            value={query}
+            onChange={(e) => setQuery(e.target.value)}
           />
         </form>
       </div>
