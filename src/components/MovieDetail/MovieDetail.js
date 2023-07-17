@@ -13,7 +13,6 @@ export default function MovieDetail() {
     async function fetchData() {
       dispatch(fetchDetail(await fetchMovieorShowDetail(id)));
     }
-    console.log("Hello");
 
     fetchData();
   }, [dispatch, id]);
@@ -21,8 +20,6 @@ export default function MovieDetail() {
   const detail = useSelector((state) => {
     return state.dataFetchingReducer.detail;
   });
-
-  console.log("detail", detail);
 
   return (
     <>

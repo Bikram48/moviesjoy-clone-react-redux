@@ -11,7 +11,6 @@ export default function MovieList() {
   const seriesData = useSelector((state) => {
     return state.dataFetchingReducer.seriesData;
   });
-  console.log(moviesData);
 
   let renderMovies =
     moviesData && moviesData.map((movie) => <MovieCard data={movie} />);

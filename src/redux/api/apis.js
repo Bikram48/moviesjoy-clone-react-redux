@@ -1,6 +1,8 @@
-export async function fetchMovies() {
+export async function fetchMovies(term) {
+  console.log(term);
+  const query = term || "James";
   const request = await fetch(
-    "https://www.omdbapi.com?apiKey=5fea68ed&s=James&type=movie"
+    `https://www.omdbapi.com?apiKey=5fea68ed&s=${query}&type=movie`
   );
 
   const response = await request.json();
@@ -9,9 +11,10 @@ export async function fetchMovies() {
   return data;
 }
 
-export async function fetchShows() {
+export async function fetchShows(term) {
+  const query = term || "detective";
   const request = await fetch(
-    "https://www.omdbapi.com/?apiKey=5fea68ed&s=detective&type=series"
+    `https://www.omdbapi.com/?apiKey=5fea68ed&s=${query}&type=series`
   );
 
   const response = await request.json();
